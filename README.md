@@ -2,6 +2,30 @@
 
 Bản khởi tạo đợt 1 gồm cấu hình MySQL cục bộ và tài liệu làm việc nhóm. Các phần Gateway, giao diện và dịch vụ được thêm qua PR theo [phân công đợt 1](docs/dot-1.md).
 
+## Cấu trúc dự án
+
+```text
+apps/
+  web-gateway/
+services/
+  identity/
+  operations/
+  billing/
+  registry/
+simulators/
+  chargers/
+  payment/
+tests/
+  contract/
+  integration/
+  end-to-end/
+```
+
+- `apps/web-gateway/` chứa Gateway Express và phần giao diện web.
+- `services/` chứa Tài khoản và Vận hành (Express), Thu phí và Service Registry (Spring Boot).
+- `simulators/` chứa hai nguồn thiết bị sạc mô phỏng A/B và nguồn thanh toán mô phỏng.
+- `tests/` chứa kiểm thử hợp đồng API, tích hợp và luồng đặt → sạc → thanh toán.
+
 ## Clone và chạy MySQL
 
 ```powershell
