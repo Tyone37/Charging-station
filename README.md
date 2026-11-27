@@ -29,8 +29,7 @@ tests/
 ## Clone và chạy MySQL
 
 ```powershell
-git clone https://github.com/Tyone37/Charging-station.git APP
-cd APP
+git clone https://github.com/Tyone37/Charging-station
 git switch develop
 Copy-Item .env.example .env
 docker compose up -d --wait
